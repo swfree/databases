@@ -11,16 +11,20 @@ describe('Persistent Node Chat Server', function() {
   beforeEach(function(done) {
     dbConnection = mysql.createConnection({
       user: 'root',
-      password: '',
+      password: 'rootroot',
       database: 'chat'
     });
     dbConnection.connect();
 
-       var tablename = ""; // TODO: fill this out
+       var tablename1 = "Messages"; 
+       // var tablename2 = "Users"; 
+       // var tablename3 = "Rooms"; 
 
     /* Empty the db table before each test so that multiple tests
      * (or repeated runs of the tests) won't screw each other up: */
-    dbConnection.query('truncate ' + tablename, done);
+    dbConnection.query('truncate ' + tablename1, done);
+    // dbConnection.query('truncate ' + tablename2, done);
+    // dbConnection.query('truncate ' + tablename3, done);
   });
 
   afterEach(function() {
