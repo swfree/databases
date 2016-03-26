@@ -10,14 +10,14 @@ module.exports = {
     } // a function which handles posting a message to the database
   },
 
-  // users: {
-  //   // Ditto as above
-  //   get: function () {
-  //     res.send(models.users.get());
-  //   },
-  //   post: function (user) { 
-  //     models.users.post(req.body);
-  //   }
-  // }
+  users: {
+    // Ditto as above
+    get: function (req, res) {
+      models.users.get(req.query.user, res);
+    },
+    post: function (user) { 
+      models.users.post(req.body);
+    }
+  }
 };
 
