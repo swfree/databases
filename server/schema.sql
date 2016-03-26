@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS `Users`;
     
 CREATE TABLE `Users` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `username` VARCHAR(20) NULL DEFAULT 'anonymous',
+  `username` VARCHAR(20) NULL UNIQUE DEFAULT 'anonymous',
   PRIMARY KEY (`id`)
 );
 
@@ -34,7 +34,7 @@ DROP TABLE IF EXISTS `Rooms`;
     
 CREATE TABLE `Rooms` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `roomname` VARCHAR(20) NULL DEFAULT 'lobby',
+  `roomname` VARCHAR(20) NULL UNIQUE DEFAULT 'lobby',
   PRIMARY KEY (`id`)
 );
 
