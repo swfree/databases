@@ -10,7 +10,17 @@ module.exports = {
       });
     }, // a function which produces all the messages
     post: function (message) {
+      // 1. get user id (if DNE make new user and get id)
+        // get id for message.username in Users
+        // INSERT IGNORE INTO Users 
+      // 2. get room id (if DNE make new room and get id)
+      // 3. query insert into messages user id, room id, text
+
+
       var roomId = 1; // TODO: replace with real room id
+      // 1. insert id to user
+      // 2. select id of user
+      // 3. 
       /* try to find id of user */
       db.query('SELECT id FROM Users WHERE username = ?', [message.username], function(err, rows) {
         if (err) { throw err; }

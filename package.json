@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "server/app.js",
   "dependencies": {
+    "bluebird": "^3.3.4",
     "body-parser": "^1.9.2",
     "express": "^4.10.1",
     "lodash": "^2.4.1",
