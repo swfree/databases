@@ -19,7 +19,7 @@ app.use(morgan('dev'));
 app.use(parser.json());
 
 // Set up our routes
-// app.use('/classes', router);
+app.use('/classes', router);
 
 // Serve the client files
 app.use(express.static(__dirname + '/../client/client'));
